@@ -11,9 +11,11 @@ const FILES_TO_CACHE = [
     "/manifest.webmanifest",
     "/styles.css",
     "/icons/icon-192x192.png",
-    "/icons/icon-512x512.png"
+    "/icons/icon-512x512.png",
+    "https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css",
+    "https://cdn.jsdelivr.net/npm/chart.js@2.8.0"
   ];
-// install
+
 self.addEventListener("install", function(evt) {
     evt.waitUntil(
       caches.open(CACHE_NAME).then(cache => {
@@ -43,7 +45,6 @@ self.addEventListener("activate", function(evt) {
     self.clients.claim();
   });
 
-// fetch
 self.addEventListener("fetch", function(evt) {
     // cache successful requests to the API
     if (evt.request.url.includes("/api/")) {
@@ -69,8 +70,6 @@ self.addEventListener("fetch", function(evt) {
       return;
     }
   
-    // if the request is not for the API, serve static assets using "offline-first" approach.
-    // see https://developers.google.com/web/fundamentals/instant-and-offline/offline-cookbook#cache-falling-back-to-network
     console.log("non-api fetch", evt.request.url)
     evt.respondWith(
       caches.match(evt.request).then(function(response) {
