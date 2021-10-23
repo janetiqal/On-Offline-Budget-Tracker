@@ -1,3 +1,5 @@
+console.log("indexeddb connected",indexedDB)
+
 let request = indexedDB.open("budget", 1);
 // console.log(request)
 let db;
