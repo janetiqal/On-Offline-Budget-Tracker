@@ -1,7 +1,4 @@
-console.log("indexeddb connected",indexedDB)
-
 let request = indexedDB.open("budget", 1);
-// console.log(request)
 let db;
 
 request.onerror = (err) => {
@@ -10,16 +7,11 @@ request.onerror = (err) => {
 
 request.onsuccess = (evt) => {
     db = evt.target.result;
-    alert("on success evt fired")
-    console.log("db:",db)
-    console.log(request.result)
-
    if (navigator.onLine) { 
        console.log("app online")
-
    }
 };
-//executes whenever a new db is created, then then onsuccess event is executed, if db already exists then onsucces event is executed first
+//executes whenever a new db is created, then the onsuccess event is executed, if db already exists then onsucces event is executed first
 request.onupgradeneeded = (evt) => {
     const db = evt.target.result;
     db.createObjectStore(('transaction'), {autoIncrement: true});
@@ -31,9 +23,8 @@ function saveRecord (record) {
     budgetObjectStore.add(record);
 };
 
-// we run another onsuccess event 
+// we run another onsuccess event inside this function when the app is back online and if data is in the queue to be added to database
 function uploadAllTransactions () {
-    console.log("check db syncing?")
     const transaction = db.transaction(['transaction'], 'readwrite'); 
     const budgetObjectStore = transaction.objectStore('transaction');
     
