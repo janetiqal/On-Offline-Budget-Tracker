@@ -39,10 +39,10 @@ The app is deployed to heroku, [here](https://desolate-scrubland-66310.herokuapp
 Run `npm i` to install dependencies, app used a MongoDB. 
 
 ## Screenshots
-<img width="450" alt="sample app photo" src="https://user-images.githubusercontent.com/84414488/138577115-d114db68-ec6e-4829-83d7-dad251d9774e.png">
+<img width="500" alt="sample app photo" src="https://user-images.githubusercontent.com/84414488/138577115-d114db68-ec6e-4829-83d7-dad251d9774e.png">
 <br>
 Data in the IndeedDB while network is offline
-<img width="400" alt="data in IndexedDB while offline" src="https://user-images.githubusercontent.com/84414488/138577127-a6a751b8-c38d-4e7b-9359-f7e17ba1643d.png">
+<img width="500" alt="data in IndexedDB while offline" src="https://user-images.githubusercontent.com/84414488/138577127-a6a751b8-c38d-4e7b-9359-f7e17ba1643d.png">
 <br>
 Data being fetched when back online:
 <img width="500" alt="app online, data being fetched" src="https://user-images.githubusercontent.com/84414488/138577157-4624a364-cc88-47f9-893b-de03efd004d1.png">
