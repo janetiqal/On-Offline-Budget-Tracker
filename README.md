@@ -1,4 +1,4 @@
-# On-Offline-Budget-Tracker
+# PWA Budget-Tracker
 
 ## Description
 A Progressive Web Application that allows users to add expenses or deposits to calculate their budget. Users are able to use the app whether they are offline or online. If the user is offline and adds items to their budget, when back online the database is updated. The key feature here is the use of IndexedDB which is used to store the data while offline.
@@ -39,8 +39,17 @@ The app is deployed to heroku, [here](https://desolate-scrubland-66310.herokuapp
 Run `npm i` to install dependencies, app used a MongoDB. 
 
 ## Screenshots
+<img width="250x250" alt="sample app photo" src="https://user-images.githubusercontent.com/84414488/138577115-d114db68-ec6e-4829-83d7-dad251d9774e.png">
+<br>
+Data in the IndeedDB while network is offline
+<img width="250x250" alt="data in IndexedDB while offline" src="https://user-images.githubusercontent.com/84414488/138577127-a6a751b8-c38d-4e7b-9359-f7e17ba1643d.png">
+<br>
+Data being fetched when back online:
+<img width="250x250" alt="app online, data being fetched" src="https://user-images.githubusercontent.com/84414488/138577157-4624a364-cc88-47f9-893b-de03efd004d1.png">
 
-## License 
+
+## License
+
   This project is covered by the license of: [MIT](https://opensource.org/licenses/MIT)
 
 ## Questions
